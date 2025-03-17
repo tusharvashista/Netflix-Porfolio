@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV - {% block title %}{% endblock %}</title>
+    {% load static %}
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="{% static 'images/favicon.svg' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon.svg' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon.svg' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.svg' %}">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+    <!-- Scripts -->
+    <script src="{% static 'js/main.js' %}" defer></script>
+    <script src="{% static 'js/animations.js' %}" defer></script>
+    <script src="{% static 'js/transitions.js' %}" defer></script>
+    <script src="{% static 'js/loading-animation.js' %}" defer></script>
+    <script src="{% static 'js/navigation.js' %}" defer></script>
+</head>
+<body class="netflix-bg">
+    <!-- Netflix-style Loading Animation with Sound -->
+    <div class="netflix-loader">
+        <div class="tv-logo">TV</div>
+        <audio id="netflix-sound" preload="auto">
+            <source src="{% static 'audio/loading sound effect.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="netflix-background">
+        <nav class="netflix-nav">
+            <div class="nav-content">
+                <a href="{% url 'home' %}" class="nav-logo">TV</a>
+                <button class="mobile-menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="nav-links">
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="{% url 'experience' %}">Experience</a>
+                    <a href="{% url 'projects' %}">Projects</a>
+                    <a href="{% url 'skills' %}">Skills</a>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <footer class="netflix-footer">
+        <div class="footer-content">
+            <p>&copy; {% now "Y" %} TUSHAR VASHISTA. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="tel:+447587490519">+44 7587490519</a>
+                <a href="mailto:info.vashistatushaar@gmail.com">info.vashistatushaar@gmail.com</a>
+                <a href="mailto:2994712V@student.gla.ac.uk">2994712V@student.gla.ac.uk</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

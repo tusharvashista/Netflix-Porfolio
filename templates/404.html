@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}404 Not Found - Tushar Vashista{% endblock %}
+
+{% block content %}
+<div class="netflix-container error-page">
+    <div class="error-content">
+        <h1 class="netflix-title">404</h1>
+        <p class="error-message">Oops! This title is not in our library.</p>
+        <a href="{% url 'home' %}" class="netflix-button">
+            <span class="icon">🏠</span>
+            Back to Home
+        </a>
+    </div>
+</div>
+{% endblock %}

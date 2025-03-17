@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects - Tushar Vashista{% endblock %}
+
+{% block content %}
+<div class="projects-section">
+    <div class="projects-header">
+        <h1>ORIGINAL PROJECTS</h1>
+    </div>
+
+    <div class="projects-grid container-fluid">
+        <!-- Netflix-Themed Portfolio -->
+        <div class="project-card featured col-md-4">
+            <div class="project-content">
+                <div class="project-category">Featured</div>
+                <h2 class="project-title">Netflix-Themed Portfolio Website</h2>
+                <p class="project-description">A modern, responsive portfolio website inspired by Netflix's design language. Features smooth animations, dynamic content loading, and a mobile-first approach. Built with Django and modern web technologies.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Django</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">CSS3</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/tusharvashista" target="_blank" class="project-button primary">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#" class="project-button secondary">
+                        <span>Live Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cloud-Native Analytics Platform -->
+        <div class="project-card col-md-4">
+            <div class="project-content">
+                <h2 class="project-title">Cloud-Native Analytics Platform</h2>
+                <p class="project-description">A scalable analytics platform built using AWS services. Features real-time data processing, containerized microservices, and automated deployment pipelines.</p>
+                <div class="project-tags">
+                    <span class="project-tag">AWS</span>
+                    <span class="project-tag">Docker</span>
+                    <span class="project-tag">Kubernetes</span>
+                    <span class="project-tag">Python</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="project-button primary">
+                        <span>View Project</span>
+                    </a>
+                    <a href="#" class="project-button secondary">
+                        <span>Documentation</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ML-Powered Recommendation Engine -->
+        <div class="project-card col-md-4">
+            <div class="project-content">
+                <h2 class="project-title">ML-Powered Recommendation Engine</h2>
+                <p class="project-description">A machine learning pipeline that processes user data to provide personalized recommendations. Implements advanced ML algorithms and real-time prediction capabilities.</p>
+                <div class="project-tags">
+                    <span class="project-tag">TensorFlow</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">AWS</span>
+                    <span class="project-tag">SageMaker</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="project-button primary">
+                        <span>Case Study</span>
+                    </a>
+                    <a href="#" class="project-button secondary">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">ACADEMIC PROJECTS</h2>
+    <div class="projects-grid container-fluid">
+        <!-- Distributed Systems Research -->
+        <div class="project-card col-md-4">
+            <div class="project-content">
+                <h2 class="project-title">Distributed Systems Research</h2>
+                <p class="project-description">Research project focusing on optimizing distributed systems performance in cloud environments. Implemented and evaluated various consistency models and replication strategies.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Java</span>
+                    <span class="project-tag">Distributed Systems</span>
+                    <span class="project-tag">Research</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="project-button primary">
+                        <span>Research Paper</span>
+                    </a>
+                    <a href="#" class="project-button secondary">
+                        <span>Presentation</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cloud Resource Optimizer -->
+        <div class="project-card col-md-4">
+            <div class="project-content">
+                <h2 class="project-title">Cloud Resource Optimizer</h2>
+                <p class="project-description">Developed an intelligent system for optimizing cloud resource allocation using machine learning techniques. Achieved significant cost reduction and performance improvements.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">ML</span>
+                    <span class="project-tag">Cloud Computing</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="project-button primary">
+                        <span>Documentation</span>
+                    </a>
+                    <a href="#" class="project-button secondary">
+                        <span>Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
