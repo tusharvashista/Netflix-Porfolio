@@ -1,0 +1,196 @@
+.netflix-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    color: #ffffff;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.about-hero {
+    margin-bottom: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.netflix-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #E50914;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.netflix-subtitle {
+    font-size: 2rem;
+    color: #E50914;
+    margin: 4rem 0 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.netflix-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: justify;
+}
+
+.education-section {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.education-card {
+    background: rgba(20, 20, 20, 0.7);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.education-card:hover {
+    transform: scale(1.02);
+    background: rgba(20, 20, 20, 0.9);
+    border-color: rgba(229, 9, 20, 0.3);
+}
+
+.education-card h3 {
+    font-size: 1.8rem;
+    color: #E50914;
+    margin-bottom: 0.5rem;
+}
+
+.education-card h4 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.date, .grade {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.netflix-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.netflix-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.netflix-list li::before {
+    content: '•';
+    color: #E50914;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-category {
+    background: rgba(20, 20, 20, 0.7);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+}
+
+.skill-category:hover {
+    transform: scale(1.02);
+    background: rgba(20, 20, 20, 0.9);
+    border-color: rgba(229, 9, 20, 0.3);
+}
+
+.skill-category h3 {
+    color: #E50914;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.interests-grid, .language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.interest-item, .language-item {
+    background: rgba(20, 20, 20, 0.7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.interest-item:hover, .language-item:hover {
+    transform: scale(1.05);
+    background: rgba(229, 9, 20, 0.1);
+    border-color: rgba(229, 9, 20, 0.3);
+}
+
+/* Animation for sections */
+.education-card, .skill-category, .interest-item, .language-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger animations */
+.education-card:nth-child(1) { animation-delay: 0.1s; }
+.education-card:nth-child(2) { animation-delay: 0.2s; }
+.education-card:nth-child(3) { animation-delay: 0.3s; }
+
+.skill-category:nth-child(1) { animation-delay: 0.4s; }
+.skill-category:nth-child(2) { animation-delay: 0.5s; }
+.skill-category:nth-child(3) { animation-delay: 0.6s; }
+
+.interest-item:nth-child(1) { animation-delay: 0.7s; }
+.interest-item:nth-child(2) { animation-delay: 0.8s; }
+
+.language-item:nth-child(1) { animation-delay: 0.9s; }
+.language-item:nth-child(2) { animation-delay: 1s; }

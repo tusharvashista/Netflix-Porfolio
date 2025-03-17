@@ -1,0 +1,77 @@
+/* Netflix-inspired error pages */
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), var(--netflix-black));
+}
+
+.error-content {
+    padding: 2rem;
+    max-width: 600px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.error-page .netflix-title {
+    font-size: 8rem;
+    color: var(--netflix-red);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: var(--netflix-white);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.error-page .netflix-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background: var(--netflix-red);
+    color: var(--netflix-white);
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.error-page .netflix-button:hover {
+    transform: translateY(-2px);
+    background: var(--netflix-dark-red);
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+.error-page .icon {
+    font-size: 1.4rem;
+}
+
+/* Mobile styles for error pages */
+@media screen and (max-width: 768px) {
+    .error-page .netflix-title {
+        font-size: 5rem;
+    }
+
+    .error-message {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    .error-page .netflix-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .error-page .netflix-title {
+        font-size: 4rem;
+    }
+}

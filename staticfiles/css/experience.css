@@ -1,0 +1,186 @@
+.netflix-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    color: #ffffff;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.netflix-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #E50914;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.experience-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.experience-card {
+    background: rgba(20, 20, 20, 0.7);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.experience-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
+    background: rgba(20, 20, 20, 0.9);
+    border-color: rgba(229, 9, 20, 0.3);
+}
+
+.experience-card.featured::before {
+    content: 'FEATURED';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #E50914;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card-content {
+    padding: 2.5rem;
+}
+
+.role-header {
+    margin-bottom: 2rem;
+}
+
+.role-header h2 {
+    font-size: 1.8rem;
+    color: #E50914;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.role-header h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.duration, .location {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.achievement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.achievement-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.achievement-list li::before {
+    content: '•';
+    color: #E50914;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.skills-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-tag {
+    background: rgba(229, 9, 20, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(229, 9, 20, 0.2);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+    .skills-used {
+        gap: 0.5rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        justify-content: flex-start;
+    }
+
+    .skill-tag {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 16px;
+        white-space: nowrap;
+        margin-bottom: 0.25rem;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .achievement-list {
+        margin-bottom: 1rem;
+    }
+}
+
+.skill-tag:hover {
+    background: rgba(229, 9, 20, 0.2);
+    transform: translateY(-2px);
+}
+
+.experience-card.leadership {
+    border: 1px solid rgba(229, 9, 20, 0.2);
+}
+
+/* Stagger animation for cards */
+.experience-card:nth-child(1) { animation-delay: 0.1s; }
+.experience-card:nth-child(2) { animation-delay: 0.2s; }
+.experience-card:nth-child(3) { animation-delay: 0.3s; }
+.experience-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

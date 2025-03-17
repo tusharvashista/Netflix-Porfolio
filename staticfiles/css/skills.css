@@ -1,0 +1,153 @@
+/* Skills Page Specific Styles */
+.netflix-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.netflix-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--netflix-white);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.skill-category {
+    margin-bottom: 1rem;
+}
+
+.skill-category .netflix-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--netflix-gray);
+}
+
+.netflix-row {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+.netflix-row::-webkit-scrollbar {
+    display: none;
+}
+
+.netflix-card.skill-card {
+    flex: 0 0 300px;
+    background: linear-gradient(to bottom,
+        rgba(20, 20, 20, 0.8) 0%,
+        rgba(20, 20, 20, 0.6) 100%
+    );
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.netflix-card.skill-card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to bottom,
+        rgba(20, 20, 20, 0.9) 0%,
+        rgba(20, 20, 20, 0.7) 100%
+    );
+}
+
+.netflix-card.skill-card.featured {
+    border: 2px solid var(--netflix-red);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--netflix-white);
+}
+
+.skill-rating {
+    margin-bottom: 1rem;
+}
+
+.match-score {
+    color: #46d369;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--netflix-red);
+    transition: width 0.3s ease;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    color: var(--netflix-gray);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--netflix-white);
+}
+
+/* Hover Effects */
+.netflix-card.skill-card:hover .progress {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Animations */
+.netflix-card.skill-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-category:nth-child(1) .netflix-card.skill-card { animation-delay: 0.1s; }
+.skill-category:nth-child(2) .netflix-card.skill-card { animation-delay: 0.2s; }
+.skill-category:nth-child(3) .netflix-card.skill-card { animation-delay: 0.3s; }
